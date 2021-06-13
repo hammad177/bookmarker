@@ -1,0 +1,59 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Bookmarker</title>
+  </head>
+  <body class="bg-dark" onload="fetchBookmarks()">
+    <div class="container w-75 my-4 bg-secondary text-white rounded">
+      <div class="container">
+        <section>
+          <h1 class="text-center m-4 pt-3">Bookmarker</h1>
+          <form id="my-form">
+            <div class="mb-2">
+              <label for="site-name" class="form-label">Name</label>
+              <input
+                type="text"
+                placeholder="Site Name"
+                class="form-control"
+                id="site-name"
+              />
+            </div>
+            <div class="mb-4">
+              <label for="site-url" class="form-label">URL</label>
+              <input
+                type="text"
+                placeholder="Site URL"
+                class="form-control"
+                id="site-url"
+              />
+            </div>
+            <div class="d-flex justify-content-center">
+              <button
+                type="submit"
+                class="btn btn-light text-dark fw-bold btn-lg w-50 mb-4"
+              >
+                Save
+              </button>
+            </div>
+          </form>
+        </section>
+        <section>
+          <ul class="list-group list-group-flush" id="list"></ul>
+        </section>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
